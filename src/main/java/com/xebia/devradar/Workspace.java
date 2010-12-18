@@ -12,7 +12,8 @@ public class Workspace {
         eventList = new ArrayList<Event>();
     }
 
-    // Maybe in the future return list should be immutable...
+    // Maybe return list should be immutable, so no one mess with it...
+    // Demeter if you hear us... :)
     public List<Event> getEvents() {
         Collections.sort(eventList);
         if (eventList.size() < max_retain_size) {
