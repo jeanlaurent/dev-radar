@@ -46,7 +46,9 @@ public class WorkspaceTest {
         }
         List<Event> eventList = workspace.getEvents();
         assertThat(eventList.size(), is(10));
-        assertThat(eventList.get(0).getMessage(), equalTo("foo14"));
+        for (int i = 0; i < 10; i++) {
+            assertThat(eventList.get(i).getMessage(), equalTo("foo" + (14 - i)));
+        }
     }
 
     // helpers...
